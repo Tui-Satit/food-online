@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  width: 80%;
+  
+}
+
+/* Header/logo Title */
+.header {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  justify-content: center;
+  width: ;
+  margin: auto;
+}
+
+/* increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+.header img {
+  width: 150px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+.headRow {
+  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /*IE10*/
+    flex-wrap: wrap;
+    border: 1px solid rgb(200, 198, 198);
+    width: ;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+   }
+
+   .headRow2 { /* New Class */
+  
+     width: 100%;
+     margin: auto;
+     display: flex;
+    
+    
+   }
+
+   .headRowImg { /* New Class */
+  
+    width: 20%;
+    margin: auto;
+   
+   }
+   .headRow2 div {
+    width: 100%;
+   }
+
+.headRow div {
+    width: 50%;
+    padding: 30px;
+   
+}
+
+
+/* Style the top navigation bar*/
+.navber {
+  overflow: hidden;
+  background-color: #333;
+  width:;
+  margin: auto;
+}
+
+/* Style the navigation bar links */
+.navber a{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+/* Right-aligned link */
+.navber a.right {
+  float: right;
+}
+ /* Change color on hover */
+ .navber a:hover {
+    background-color: #ddd;
+    color: black
+ }
+
+ /* Column container */
+ .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /*IE10*/
+  flex-wrap: wrap;
+  border: 1px solid rgb(200, 198, 198);
+  width: ;
+  margin: auto;
+ }
+
+ /* insert row : Clear floats after the columns */
+ .row2:after {
+       content: "";
+       display: table;
+       clear: both;
+       margin-top: 20px;
+ }
+
+ /* Say Hi Section */
+ .welcome {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  background-color: #ddd;
+  text-align: center;
+ }
+
+ /* Create two unequal columns site next sits next to each other*/
+
+ .column {
+  float:left;
+  width: 25%;
+  height: 350px;
+  padding: 20px;
+  height:  /* Should be removed. Only for demonstration*/
+  text-align: center;
+ }
+ .column img {
+  border-radius: 20px;
+ }
+ /* Sidebar /left column */
+.side {
+  -ms-flex: 30%; /* IE10*/
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  -ms-flex: ; /* IE10 */
+  flex: ;
+  background-color: white;
+  padding: 0px;
+}
+.main2 {
+  -ms-flex: ; /* IE10 */
+  flex: ;
+  background-color: white;
+  padding: 0px;
+  
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  width: ;
+  margin: 20px;
+  margin:auto;
+  margin-bottom: 20px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide , make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  body {
+    width: 100% ;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .column {
+    flex-direction: column;
+    width: 50%; 
+  }
+  .headRow div {
+    flex-direction: column;
+    width: ;
+  }
+  .header {
+    
+    width:;
+  }
+  .header h1 {
+    float: none;
+   
+  }
+  
+  
+}
+
+/* Responsive layout - when the screen is less than 400px wide , make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px)   {
+  .navber  {
+    float: none;
+    width:;
+  } 
+  .flex-container  {
+    float: none;
+    width: 100%;
+  } 
+  
+  .footer  {
+    float: none;
+    width: ;
+  } 
+  
+  
+}
+
+
+
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.button {
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: #04aa6d;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button:hover {
+ 
+  background-color: #1abc9c;
+}
+.social {
+  float: none;
+  background-color: rgb(235, 231, 225);
+  width: ;
+  height: px;
+}
+  .connectShop {
+    background-color: #aaa;
+    width: 500px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: ;
+    text-align: center;
+    width: ;
+    margin: auto;
+  }
+  
+  .flex-item-left {
+    background-color: #f1f1f1;
+    padding: 20px;
+    flex: 50%;
+  }
+  .flex-item-right {
+    background-color: #f1f1f1;
+    padding: 20px;
+    flex: 50%;
+  }
+  
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3b5998;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .order-summery {
+    margin-left: 20px;
+  }
+  /* Responsive layout - makes a one column-layout instead of a two-column layout */
+  @media (max-width: 600px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+    .flex-container {
+      width: 100%;
+    }
+  }
+  
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+

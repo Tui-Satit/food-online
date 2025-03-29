@@ -1,0 +1,62 @@
+Creating a frontend website that allows users to log in using the LINE application involves integrating LINE's Login API. Below is a simple example using HTML and JavaScript to achieve this.
+
+Step 1: Set Up LINE Developer Account
+Go to the LINE Developers Console.
+Create a new provider and a new channel.
+Obtain your Channel ID and Channel Secret.
+Step 2: Configure Your Channel
+Set the callback URL to your website's URL where LINE will redirect after login.
+Enable the "Email" permission if you need the user's email.
+Step 3: Frontend Code
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with LINE</title>
+</head>
+<body>
+    <button id="loginButton">Login with LINE</button>
+
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+JavaScript (app.js)
+document.getElementById('loginButton').addEventListener('click', function() {
+    liff.init({
+        liffId: 'YOUR_LIFF_ID' // Replace with your LIFF ID
+    }).then(() => {
+        if (!liff.isLoggedIn()) {
+            liff.login();
+        } else {
+            getUserProfile();
+        }
+    }).catch(err => {
+        console.error('LIFF Initialization failed ', err);
+    });
+});
+
+function getUserProfile() {
+    liff.getProfile().then(profile => {
+        console.log('User ID: ' + profile.userId);
+        console.log('Display Name: ' + profile.displayName);
+        // You can now use the profile information
+    }).catch(err => {
+        console.error('Error getting profile: ', err);
+    });
+}
+
+Explanation
+HTML: A simple button to trigger the LINE login.
+JavaScript:
+Initialize the LIFF SDK with your LIFF ID.
+Check if the user is logged in; if not, trigger the login process.
+If logged in, retrieve and display the user's profile information.
+Notes
+Replace 'YOUR_LIFF_ID' with the actual LIFF ID from your LINE Developers Console.
+Ensure your callback URL is correctly set in the LINE Developers Console.
+
+This example provides a basic setup. Depending on your needs, you might want to handle errors more gracefully and manage user sessions on your server.
